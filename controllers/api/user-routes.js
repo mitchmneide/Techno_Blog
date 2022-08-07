@@ -42,7 +42,7 @@ router.get('/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
-router.post('/', withAuth, (req, res) => {
+router.post('/',  (req, res) => {
     // expects {username: 'Mitchel', email: 'mitchmneide@gmail.com' password: }
     User.create({
         username: req.body.username,
@@ -62,7 +62,7 @@ router.post('/', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
-router.post('/login', withAuth, (req, res) => {
+router.post('/login', (req, res) => {
     User.findOne({
         where: {
             email: req.body.email
@@ -88,7 +88,7 @@ router.post('/login', withAuth, (req, res) => {
         });
     }); 
 });
-router.post('/logout', withAuth, (req, res) => {
+router.post('/logout',  (req, res) => {
     if(req.session.loggedIn) {
         req.session.destroy(() => {
             res.status(204).end();
@@ -97,7 +97,7 @@ router.post('/logout', withAuth, (req, res) => {
         res.status(404).end();
     }
 });
-router.put('/:id', withAuth,(req, res) => {
+router.put('/:id', (req, res) => {
     User.update(req.body, {
         where: {
             id: req.params.id
@@ -114,7 +114,7 @@ router.put('/:id', withAuth,(req, res) => {
             res.status(500).json(err);
         });
 });
-router.delete('/:id',withAuth, (req, res) => {
+router.delete('/:id', (req, res) => {
     User.destroy({
         where: {
             id: req.params.id
