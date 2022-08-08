@@ -1,7 +1,24 @@
 * {
     box-sizing: border-box;
   }
-  
+  ul {
+    list-style-type: none;
+    
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+  }
+  li {
+    float:left;
+  }
+  li a {
+    display: block;
+    color:white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
   body, html {
     height: 100%;
     padding: 0;
@@ -12,20 +29,20 @@
   
   a {
     text-decoration: none;
-    color: #225ca3;
     font-weight: bold;
     transition: color .1s;
+    color: #CBCBCB
   }
   
   a:hover {
-    color: #3486eb;
+    color: #FFB2B2;
   }
   
   button {
-    background-color: #225ca3;
+    background-color:#CBCBCB;
     border: 0;
     padding: 1%;
-    color: white;
+    color: #333333;
     font-weight: bold;
     transition: background-color .1s;
     cursor: pointer;
@@ -33,7 +50,8 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: #FFB2B2;
+    color:white;
   }
   
   .post-list {
@@ -42,8 +60,8 @@
   }
   
   textarea, input {
-    padding: .5%;
-    border-radius: 5px;
+    padding: 5.5%;
+    border-radius: 12px;
     border: 1px solid #ccc;
   }
   
@@ -63,6 +81,11 @@
   
   form label {
     display: block;
+    color:#FFB2B2;
+  }
+  .loginFont {
+    color: #FFB2B2;
+    
   }
   
   .wrapper {
@@ -72,26 +95,46 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: beige;
+    background-color: #333333;
   }
   
   header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #FFB2B2;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 2em;
   }
-  
+  h1 {
+    color: #CBCBCB
+  }
   main {
     flex: 1;
     padding: 2% 4%;
   }
-  
+  .form {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+  .login-form {
+    border: 1px solid #FFB2B2;
+    border-radius: 6px;
+    padding: 40px 50px 50px 50px;
+  }
+  .signup-form {
+    border: 1px solid #FFB2B2;
+    border-radius: 6px;
+    padding: 40px 50px 50px 50px;
+  }
   .btn-no-style {
     background: none;
     border: none;
@@ -104,7 +147,17 @@
     transition: color .1s;
     margin-left: 16px;
   }
-  
+  .buttons {
+    background-color:#CBCBCB;
+    border: 0;
+    color: #333333;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 30px;
+    margin: 10px 19px ;
+  }
   .btn-no-style:hover {
     background: none;
     color: #3486eb;
@@ -162,7 +215,7 @@
   }
   
   footer {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #FFB2B2;
     display: flex;
     justify-content: center;
     padding: 1%;
