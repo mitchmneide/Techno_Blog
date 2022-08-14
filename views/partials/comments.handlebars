@@ -1,6 +1,11 @@
 <div class="comments">
+    <h2> Comments</h2>
     {{#each this}}
-    <section>
-        <p
+    <section class="comment">
+        <p>
+            {{comment_text}}
+            <span>Comment left by {{user.username}} on </span>
+        </p>
     </section>
+    {{/each}}
 </div>

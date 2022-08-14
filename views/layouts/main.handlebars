@@ -17,18 +17,19 @@
             <nav>
 
                 <ul>
-                    <li>
+                    <li class="float">
                         <a href="/"> Home</a>
                     </li>
-                    <li>
+                    <li class="float">
                         <a href="/dashboard"> Dashboard</a>
                     </li>
                     {{#if loggedIn}}
-                    <li>
-                        <button id="logout" class="btn-no-style">logout</button>
+                    <li class="float">
+                        <a href="/logout"> Logout</a>
+                        {{!-- <button id="logout" >logout</button> --}}
                     </li>
                     {{else}}
-                    <li>
+                    <li class="float">
                         <a href="/login">Login</a>
                     </li>
                     {{/if}}
@@ -41,12 +42,12 @@
             {{{ body }}}
         </main>
         <footer>
-
+             ⓒ2022 Mitchel Eide Coding bootcamp
         </footer>
     </div>
-    {{#if loggedIn}}
+    {{!-- {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-    {{/if}}
+    {{/if}} --}}
 </body>
 
 </html>

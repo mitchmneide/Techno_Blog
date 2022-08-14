@@ -3,13 +3,12 @@
   }
   ul {
     list-style-type: none;
-    
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333333;
   }
-  li {
+  .float {
     float:left;
   }
   li a {
@@ -24,7 +23,7 @@
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: #FFB2B2;
   }
   
   a {
@@ -56,7 +55,9 @@
   
   .post-list {
     margin: 0;
-    padding: 0;
+    padding: 0 0 20px 6px;
+    list-style-type: none;
+
   }
   
   textarea, input {
@@ -170,23 +171,59 @@
   .delete-post-btn:hover {
     background-color: #ff643d;
   }
-  
-  .post {
+  #post-title textarea,input{
+    padding: 2.5%;
+  }
+  textarea,comment-body {
+    padding: 5%;
+  }
+  .dashboard {
+    text-align: center;
+  }
+  .post-list li a {
+    padding: 0 0 16px 0;
+    text-align: inherit;
+    color: #CBCBCB;
+    display: initial;
+    float: none;
+  }
+  /* .post {
     margin-bottom: 2%;
     line-height: 150%;
-  }
+  } */
   
-  .post .title span {
+  .post .content span {
     font-style: italic;
     font-size: 90%;
-    color: #7d7d7d;
+    color: #CBCBCB;
   }
-  
+  .dashboard-section {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .btn {
+    background-color:#CBCBCB;
+    border: 0;
+    color: #333333;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 30px;
+    margin: 10px 19px ;
+  }
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
   }
-  
+  .dash {
+   text-align: center;
+   text-decoration: underline;
+   padding: 1%;
+  }
   .comment-form {
     margin-bottom: 5%;
   }
@@ -209,7 +246,9 @@
   .new-post-form input {
     width: 300px;
   }
-  
+  .logout-form {
+    text-align: center;
+  }
   .edit-post-form {
     margin-bottom: 5%;
   }
