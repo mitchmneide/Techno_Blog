@@ -197,6 +197,11 @@
     font-size: 90%;
     color: #CBCBCB;
   }
+  .comment span {
+    font-style: italic;
+    font-size: 90%;
+    color: #CBCBCB;
+  }
   .dashboard-section {
     align-content: center;
     display: flex;
@@ -232,11 +237,6 @@
     padding: 1%;
     margin-bottom: 1%;
   }
-  
-  .comment:nth-child(odd) {
-    background-color: #fff5eb;
-  }
-  
   .comment .meta {
     font-size: 90%;
     margin-bottom: .5%;

@@ -4,7 +4,8 @@
     <section class="comment">
         <p>
             {{comment_text}}
-            <span>Comment left by {{user.username}} on </span>
+            <br>
+            <span>Comment left by {{user.username}} on {{format_date created_at}}</span>
         </p>
     </section>
     {{/each}}
